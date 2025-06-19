@@ -1,0 +1,100 @@
+/**
+ * App Window
+ */
+@define-color bg_color rgba(18, 28, 45, 0.9);
+@define-color window_bg @bg_color;
+@define-color window_border_color rgba(0, 195, 227, 0.9);
+@define-color prefs_backgroud rgba(18, 28, 45, 0.9);
+
+/**
+ * Input
+ */
+@define-color selected_bg_color rgba(24, 79, 107, 0.9);
+@define-color selected_fg_color rgba(0, 195, 227, 0.9);
+@define-color input_color rgba(210, 217, 226, 1);
+@define-color caret_color darker(@input_color);
+
+/**
+ * Result items
+ */
+@define-color item_name rgba(210, 217, 226, 1);
+@define-color item_text rgba(180, 180, 180, 1);
+@define-color item_box_selected rgba(24, 79, 107, 0.7);
+@define-color item_text_selected rgba(210, 217, 226, 1);
+@define-color item_name_selected rgba(210, 217, 226, 1);
+@define-color item_shortcut_color rgba(210, 217, 226, 1);
+@define-color item_shortcut_shadow darker(@bg_color);
+@define-color item_shortcut_color_sel rgba(210, 217, 226, 1);
+@define-color item_shortcut_shadow_sel darker(@item_box_selected);
+
+.app {
+    background-color: @window_bg;
+    border: 0px solid @window_border_color;
+    border-radius: 10px;
+}
+
+.input {
+    caret-color: @caret_color;
+    color: @item_name;
+    border: solid 1px rgba(0, 195, 227, 1);
+    border-radius: 7px;
+    background-color: rgba(18, 28, 45, 0.1);
+    font-size: 120%;
+    margin-left: -8px;
+    margin-top: -3px;
+    margin-bottom: 0px
+}
+
+/**
+ * Selected text in input
+ */
+.input *:selected,
+.input *:focus,
+*:selected:focus {
+    background-color: alpha (@selected_bg_color, 0.9);
+    color: @selected_fg_color;
+}
+
+.item-text {
+    color: @item_text;
+}
+.item-name {
+    color: @item_name;
+    font-size: 105%
+}
+
+.result-box {
+    margin: -5px 10px 5px 10px;
+}
+.selected.item-box {
+    background-color: @item_box_selected;
+    border-radius: 7px;
+}
+.selected.item-box .item-text {
+    color: @item_text_selected;
+}
+.selected.item-box .item-name {
+    color: @item_name_selected;
+}
+.item-shortcut {
+    color: @item_shortcut_color;
+    margin-right: -15px;
+}
+.selected.item-box .item-shortcut {
+    color: @item_shortcut_color_sel;
+}
+
+.prefs-btn {
+    margin-left: -10px;
+    margin-top: -5px;
+    margin-bottom: -5px
+}
+.prefs-btn:hover {
+    background-color: rgba(18, 28, 45, 0.1);
+    transition: background-color 0.1s;
+    border: solid 1px rgba(0, 195, 227, 1);
+    border-radius: 7px
+}
+.prefs-btn:active {
+background-color: rgba(0, 195, 227, 0.9)
+}
