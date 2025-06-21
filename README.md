@@ -1,7 +1,7 @@
 # Breeze Ars theme for Ulauncher
 Based on a few themes, I created a theme that matches the qt-breeze-ars color scheme, some incompatibilities may occur, sorry, you can change the css file optionally.
 
-![Preview](breeze-ars.png)
+![Preview](breeze-ars.webp)
 
 
 ## Installation
