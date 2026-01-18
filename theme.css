@@ -6,7 +6,7 @@
 @define-color window_border_color rgba(0, 195, 227, 0.9);  /* 2) selected text, search-bar border & preferences button border */
 @define-color prefs_backgroud @bg_color;
 
-@define-color selected_bg_color rgba(24, 79, 107, 0.6);  /* 3) color: selected text background & selected item background */
+@define-color selected_bg_color rgba(24, 79, 107, 0.6);  /* 3) selected text background & selected item background */
 @define-color selected_fg_color @window_border_color;
 @define-color input_color rgba(210, 217, 226, 1);  /* 4) input text & item name color */
 @define-color caret_color @window_border_color;
